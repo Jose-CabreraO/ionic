@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
+  selector: 'app-tab3',
+  templateUrl: './tab3.page.html',
+  styleUrls: ['./tab3.page.scss'],
+  imports: [CommonModule, IonicModule]
 })
 export class Tab3Page {
-  constructor() {}
+  newsList = [
+    { title: 'Noticia 1', content: 'Contenido de la noticia 1...' },
+    { title: 'Noticia 2', content: 'Contenido de la noticia 2...' },
+  ];
 }
