@@ -35,3 +35,24 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+/* Tema claro */
+:root {
+  --ion-color-primary: #3880ff; /* Color primario */
+  --ion-color-secondary: #3dc2ff; /* Color secundario */
+  --ion-color-tertiary: #7044ff; /* Color terciario */
+  --ion-background-color: #ffffff; /* Fondo blanco para el tema claro */
+  --ion-text-color: #000000; /* Texto negro para el tema claro */
+}
+
+/* Tema oscuro */
+.dark-theme {
+  --ion-color-primary: #5c5c5c; /* Color primario oscuro */
+  --ion-color-secondary: #888888; /* Color secundario oscuro */
+  --ion-color-tertiary: #aa88ff; /* Color terciario oscuro */
+  --ion-background-color: #222; /* Fondo oscuro */
+  --ion-text-color: #ffffff; /* Texto blanco para el tema oscuro */
+}
+
+

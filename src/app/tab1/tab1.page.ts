@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { TemaService } from '../tema.service';
 
 @Component({
   standalone: true,
@@ -28,9 +29,16 @@ export class Tab1Page {
     }
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private temaService: TemaService) {}
 
   goToNews(newsId: number) {
     this.router.navigate(['/tabs/tab3', newsId]);
   }
+
+  cambiarTema() {
+    alert('Cambiando tema...');
+    this.temaService.toggleTema();
+  }
+  
 }
+

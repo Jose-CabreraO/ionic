@@ -73,3 +73,17 @@ ion-content {
   .news-card:hover .button-container {
     display: block; 
   }
+  :root {
+    --ion-color-primary: #3880ff;
+    --ion-color-secondary: #3dc2ff;
+    --ion-color-tertiary: #7044ff;
+    /* Otros colores de tema claro */
+  }
+  
+  /* Tema oscuro */
+  .dark-theme {
+    --ion-color-primary: #5c5c5c;
+    --ion-color-secondary: #888888;
+    --ion-color-tertiary: #aa88ff;
+   
+  }
