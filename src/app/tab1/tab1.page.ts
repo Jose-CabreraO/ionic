@@ -11,23 +11,26 @@ import { IonicModule } from '@ionic/angular';
   imports: [CommonModule, IonicModule]
 })
 export class Tab1Page {
-  showDetails: boolean[] = [false, false]; // Para manejar el estado de cada tarjeta
-  private hideTimeout: any; // Para almacenar el temporizador
+  newsList = [
+    {
+      id: 0,
+      title: 'Porsche 911',
+      image: '../../assets/img/porsche-cayenne-v8-phev-top-version.jpg',
+      date: '2024-09-30',
+      brief: 'El Porsche 911 es el icónico auto deportivo de la marca alemana Porsche, conocido por su agilidad y velocidad.',
+    },
+    {
+      id: 1,
+      title: 'Porsche Taycan',
+      image: '../../assets/img/taycan.jpeg',
+      date: '2024-09-30',
+      brief: 'El Porsche Taycan es el primer auto totalmente eléctrico de Porsche, que combina rendimiento y sostenibilidad.',
+    }
+  ];
 
   constructor(private router: Router) {}
 
-  goToNews() {
-    this.router.navigate(['/tabs/tab3']);
-  }
-
-  toggleDetails(index: number) {
-    this.showDetails[index] = true; // Al pasar el mouse, muestra el detalle
-    clearTimeout(this.hideTimeout); // Limpia cualquier temporizador anterior
-  }
-
-  hideDetails(index: number) {
-    this.hideTimeout = setTimeout(() => {
-      this.showDetails[index] = false; // Cierra el detalle después de un pequeño retraso
-    }, 200); // Retraso de 200 ms, ajusta según sea necesario
+  goToNews(newsId: number) {
+    this.router.navigate(['/tabs/tab3', newsId]);
   }
 }
