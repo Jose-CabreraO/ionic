@@ -17,14 +17,9 @@ export const routes: Routes = [
           import('../tab2/tab2.page').then((m) => m.PerfilPage),
       },
       {
-        path: 'tab3/:id',
+        path: 'tab3',
         loadComponent: () =>
           import('../tab3/tab3.page').then((m) => m.NewsPage),
-      },
-      {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full',
       },
     ],
   },

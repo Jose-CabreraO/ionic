@@ -1,28 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Inicio</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="cambiarTema()">
-        Cambiar Tema
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="card-container">
-    <ion-card *ngFor="let news of newsList" class="news-card">
-      <img [src]="news.image" class="fixed-size-image" />
-      <ion-card-header>
-        <ion-card-title>{{ news.title }}</ion-card-title>
-        <ion-card-subtitle>{{ news.date }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ news.brief }}</p>
-        <div class="button-container">
-          <ion-button class="ver-mas" (click)="goToNews(news.id)">Ver más</ion-button>
-        </div>
-      </ion-card-content>
-    </ion-card>
+  <div class="empty-message">
+    <p>Esta sección estará disponible pronto.</p>
   </div>
 </ion-content>
+
+<style>
+  .empty-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+  }
+</style>

@@ -12,28 +12,9 @@ import { TemaService } from '../tema.service';
   imports: [CommonModule, IonicModule]
 })
 export class Tab1Page {
-  newsList = [
-    {
-      id: 0,
-      title: 'Porsche 911',
-      image: '../../assets/img/porsche-cayenne-v8-phev-top-version.jpg',
-      date: '2024-09-30',
-      brief: 'El Porsche 911 es el icónico auto deportivo de la marca alemana Porsche, conocido por su agilidad y velocidad.',
-    },
-    {
-      id: 1,
-      title: 'Porsche Taycan',
-      image: '../../assets/img/taycan.jpeg',
-      date: '2024-09-30',
-      brief: 'El Porsche Taycan es el primer auto totalmente eléctrico de Porsche, que combina rendimiento y sostenibilidad.',
-    }
-  ];
-
+  
   constructor(private router: Router, private temaService: TemaService) {}
 
-  goToNews(newsId: number) {
-    this.router.navigate(['/tabs/tab3', newsId]);
-  }
 
   cambiarTema() {
     alert('Cambiando tema...');

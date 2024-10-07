@@ -5,29 +5,15 @@
 </ion-header>
 
 <ion-content>
-  <ng-container *ngIf="selectedNews; else newsListTemplate">
-    <ion-card>
-      <img [src]="selectedNews.image" />
-      <ion-card-header>
-        <ion-card-title>{{ selectedNews.title }}</ion-card-title>
-        <ion-card-subtitle>{{ selectedNews.date }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ selectedNews.content }}</p>
-      </ion-card-content>
-    </ion-card>
-  </ng-container>
-
-  <ng-template #newsListTemplate>
-    <ion-card *ngFor="let news of newsList">
-      <img [src]="news.image" />
-      <ion-card-header>
-        <ion-card-title>{{ news.title }}</ion-card-title>
-        <ion-card-subtitle>{{ news.date }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ news.content }}</p>
-      </ion-card-content>
-    </ion-card>
-  </ng-template>
+  <ion-card>
+    <img src="../../assets/img/noticia1.jpg" alt="Noticia Imagen" />
+    <ion-card-header>
+      <ion-card-title>Título de la Noticia</ion-card-title>
+      <ion-card-subtitle>Publicado el: 06 de octubre, 2024</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Resumen corto de la noticia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </ion-card-content>
+    <ion-button expand="full" routerLink="/news-detail">Ver más</ion-button>
+  </ion-card>
 </ion-content>
