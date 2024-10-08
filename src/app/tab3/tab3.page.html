@@ -1,19 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Noticias</ion-title>
+    <ion-title>Noticias Porsche</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <img src="../../assets/img/noticia1.jpg" alt="Noticia Imagen" />
+  <ion-card *ngFor="let noticia of noticias">
+    <img [src]="noticia.imagen" alt="Noticia Imagen" />
     <ion-card-header>
-      <ion-card-title>Título de la Noticia</ion-card-title>
-      <ion-card-subtitle>Publicado el: 06 de octubre, 2024</ion-card-subtitle>
+      <ion-card-title>{{ noticia.titulo }}</ion-card-title>
+      <ion-card-subtitle>Publicado el: {{ noticia.fecha }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      Resumen corto de la noticia... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      {{ noticia.resumen }}
     </ion-card-content>
-    <ion-button expand="full" routerLink="/news-detail">Ver más</ion-button>
+    <ion-button expand="full" [routerLink]="['/news-detail', noticia.id]">Ver más</ion-button>
   </ion-card>
 </ion-content>

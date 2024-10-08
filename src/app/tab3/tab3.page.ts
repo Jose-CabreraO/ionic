@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router'; // Importar RouterModule
 import { Router } from '@angular/router';
-
+import { NoticiasService } from '../noticias.service';
 
 
 @Component({
@@ -17,10 +17,13 @@ import { Router } from '@angular/router';
 export class NewsPage implements OnInit {
   
 
-  constructor(private router: Router) {} 
+  noticias : any[] = [];
+
+
+  constructor(private router: Router, private noticiasService: NoticiasService) {} 
 
   ngOnInit() {
-   
+    this.noticias = this.noticiasService.getNoticias();
   }   
   }
 
