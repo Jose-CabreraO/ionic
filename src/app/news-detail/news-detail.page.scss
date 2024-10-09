@@ -1,0 +1,7 @@
+.noticia-imagen {
+    width: 100%;          /* La imagen se ajustará al 100% del contenedor */
+    height: 500px;        /* Todas las imágenes tendrán una altura fija */
+    object-fit: cover;    /* Esto asegura que la imagen mantenga su proporción y se ajuste al espacio, recortando si es necesario */
+    display: block;       /* Elimina el espacio blanco debajo de las imágenes */
+  }
+  

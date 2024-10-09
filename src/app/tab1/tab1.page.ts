@@ -12,13 +12,25 @@ import { TemaService } from '../tema.service';
   imports: [CommonModule, IonicModule]
 })
 export class Tab1Page {
+
+  words: string[] = ["Soy Jose Cabrera", "Programador", "Desarrollador Web", "Entusiasta de la tecnología"];
+  currentWordIndex: number = 0;
   
   constructor(private router: Router, private temaService: TemaService) {}
 
+  ngOnInit() {
+    this.changeWord();
+  }
 
-  cambiarTema() {
-    alert('Cambiando tema...');
-    this.temaService.toggleTema();
+  changeWord() {
+    const dynamicTextElement = document.querySelector('.dynamic-text');
+    
+    if (dynamicTextElement) { 
+      setInterval(() => {
+        dynamicTextElement.textContent = this.words[this.currentWordIndex];
+        this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
+      }, 4000); 
+    }
   }
   
 }

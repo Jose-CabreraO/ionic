@@ -1,0 +1,11 @@
+.noticia-imagen {
+    width: 100%;          
+    height: 500px;        
+    object-fit: cover;    
+    display: block;       
+  }
+  .news-content {
+    --scroll-padding-bottom: 60px; /* Ajusta para evitar solapamiento con los tabs */
+  }
+  
+  

@@ -4,9 +4,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let noticia of noticias">
-    <img [src]="noticia.imagen" alt="Noticia Imagen" />
+<ion-content class="news-content">
+  <ion-card *ngFor="let noticia of noticias" >
+    <img [src]="noticia.imagen" alt="Noticia Imagen" class="noticia-imagen" />
     <ion-card-header>
       <ion-card-title>{{ noticia.titulo }}</ion-card-title>
       <ion-card-subtitle>Publicado el: {{ noticia.fecha }}</ion-card-subtitle>
@@ -14,6 +14,9 @@
     <ion-card-content>
       {{ noticia.resumen }}
     </ion-card-content>
-    <ion-button expand="full" [routerLink]="['/news-detail', noticia.id]">Ver más</ion-button>
+    <ion-footer>
+      <ion-button expand="full" [routerLink]="['/news-detail', noticia.id]">Ver más</ion-button>
+    </ion-footer>
+    >
   </ion-card>
 </ion-content>
