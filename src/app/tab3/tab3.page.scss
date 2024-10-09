@@ -5,7 +5,11 @@
     display: block;       
   }
   .news-content {
-    --scroll-padding-bottom: 60px; /* Ajusta para evitar solapamiento con los tabs */
+    --scroll-padding-bottom: 500px; 
   }
   
+  ion-content {
+    --padding-bottom: 60px; /* Ajusta el tamaño del padding */
+    --scroll-padding-bottom: 60px;
+  }
   
